@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Louis Peyrondet</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/carousel.css">
+    <link rel="stylesheet" href="/css/projects.css">
+</head>
+<body>
+    <header>
+        <h1>Louis Peyrondet</h1>
+        <nav>
+            <ul>
+                <li><a class="header-jump" href="#about">About</a></li>
+                <li><a class="header-jump" href="#projects">Projects</a></li>
+                <!-- <li><a class="header-jump" href="#experience">Experience</a></li> -->
+                <li><a class="header-jump" href="#publications">Publications</a></li>
+                <li><a class="header-jump" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about" id="about">
+        Hey, I'm Louis Peyrondet a <span id="age" class="years"></span> year-old software engineering student currently at Enseirb-Matmeca. I'm mainly interested in low level development, GPUs, optimization, system programming, parallel and distributed computing. I'm also open to exploring additional domains and expanding my skill set.<br>
+        You can download my <b><a href="/ressources/pdf/resume_en.pdf" target="_blank">Resume</a></b>. <br>
+        Here are some of my projects and experience !
+    </section>
+
+    <section id="projects">
+        <h2 class="section-header">Projects</h2>
+        <div id="projects-content">
+
+
+        </div>
+        <p class="project-end">And many more !</p>
+    </section>
+
+    <!-- <section id="experiences">
+        <h2 class="section-header">Experience</h2>
+    </section> -->
+
+    <section id="publications">
+        <h2 class="section-header">Publications</h2>
+        <div class="publications-container">
+            <div class="conference-paper">
+                <u>Conference Papers :</u>
+                <ul>
+                    <li class="paper">
+                        <p>F.Boito, A.T.A.Gomes, L.Peyrondet, L.Teylo. <b>I/O performance of multiscale finite element simulations on HPC environments</b>, 2022 International Symposium on Computer Architecture and High Performance Computing Workshops (SBAC-PADW), Bordeaux, France, 2022. <a href="/ressources/pdf/io_finite_element_hpc.pdf" target="_blank">PDF LINK</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-header">Contact</h2>
+        <p>Contact information and a contact form can go here. ie Discord, linkedin, mail, Github, ect</p>
+    </section>
+
+    <footer>
+        <p>Made from scratch in pure HTML, CSS and JavaScript</p>
+        <p>&copy; 2024 Louis Peyrondet</p>
+    </footer>
+
+    
+    <script type="module" src="/js/amazonDemo.js"></script>
+    <script type="text/javascript" src="/js/amazon.js"></script>
+    <script type="text/javascript" src="/js/carousel.js"></script>
+    <script type="module" src="/js/generateProjects.js"></script>
+    <script>
+        function updateAge() {
+            const ageSpan = document.getElementById("age");
+            const birthDateObj = new Date("2002-01-26");
+            const millisecondsInYear = 3.15576e10;
+            
+            const intervalId = setInterval(function () {
+                const currentDate = new Date();
+                const age = (currentDate - birthDateObj) / millisecondsInYear;
+                const formattedAge = age.toFixed(9).padEnd(11, "0"); // Ensure 9 digits after the decimal point
+                ageSpan.textContent = formattedAge;
+            }, 50);
+        }
+        window.addEventListener("load", updateAge);
+    </script>
+
+
+</body>
+</html>
