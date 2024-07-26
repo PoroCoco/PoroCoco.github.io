@@ -1,6 +1,54 @@
 [
     {
-        "title" : "Vulkan Engine",
+        "title" : "Operating System for RISC-V Processors",
+        "date" : "2024",
+        "type" : "Personal Project",
+        "description" : "During my semester abroad at Keio University, I joined the Computer Science club, Keio Computer Society, where I taught OS concepts to three undergraduates through the development of an operating system built from the ground up in C as a team. Features process creation and scheduling, virtual memory with pages, system calls and trap handling, basic I/O operations and shell program running in user space.",
+        "tags" : ["C", "OS", "RISC-V"],
+        "icons" : 
+        [
+        ],
+        "media" :
+        [
+            {"alt-text" : "Terminal about of the QEMU launch with user space shell",  "path" : "/images/os_terminal.png"}
+        ]
+    },
+    {
+        "title" : "Computer Vision Projects :<br>3D Projection | Photometric Stereo | Image Stitcher ",
+        "date" : "2024",
+        "type" : "School Project",
+        "description" : "Compilation of various Computer Vision projects, including Photometric Stereo using Lambertian Reflectance Maps, automatic Image Stitching with geometric transforms and feature matching, and real-time 3D object projection on checkerboard patterns. Implemented key OpenCV functions using NumPy.",
+        "tags" : ["Python", "OpenCV", "Numpy", "Computer Vision"],
+        "icons" : 
+        [
+            {"alt" : "Report", "link" : "ressources/pdf/photometric_stereo.pdf", "path" : "/images/icon_pdf.png"}
+        ],
+        "media" :
+        [
+            {"alt-text" : "Youtube video showcase for Photometric stereo",  "path" : "/youtube/https://www.youtube.com/watch?v=4jEdv5bEzTo"},
+            {"alt-text" : "Stiching image of a palace",  "path" : "/images/cv-palace.png"},
+            {"alt-text" : "Stiching image a balcony",  "path" : "/images/cv-balcony.png"},
+            {"alt-text" : "3D Projection of a cube",  "path" : "/images/cv-cube_projection.png"}
+        ]
+    },
+    {
+        "title" : "Voxel Game Engine",
+        "date" : "2024",
+        "type" : "Personal Project",
+        "description" : "A Minecraft clone made from scratch in C and OpenGL. It renders in real time at over 120 fps, handling more than 4 Billion voxels. The project features custom data structures, including hashtables and producer-consumer queues. Chunk generation is optimized and multi-threaded, utilizing greedy meshing and bit-packed data for efficient GPU communication. OpenGL operates on a separate rendering thread, ensuring smooth performance. The project also supports cross-platform compilation.",
+        "tags" : ["C", "OpenGL", "Parallel", "Graphics"],
+        "icons" : 
+        [
+            {"alt" : "Github Repo", "link" : "https://github.com/PoroCoco/C-Minecraft", "path" : "/images/icon_github.png"}
+        ],
+        "media" :
+        [
+            {"alt-text" : "Youtube video for chunk generation demo",  "path" : "/youtube/https://www.youtube.com/watch?v=XrN-4W7g4n8"},
+            {"alt-text" : "Screenshot from a lake view with performance metrics",  "path" : "/images/voxel_main.png"}
+        ]
+    },
+    {
+        "title" : "Vulkan Renderer",
         "date" : "2024",
         "type" : "Personal Project",
         "description" : "A simple vulkan based renderer. It can load models and have a camera module to navigate in the scene. It's a work in progress project and still is very barebone.",
