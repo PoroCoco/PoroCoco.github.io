@@ -1,5 +1,36 @@
 [
     {
+        "title" : "High-Performance Matrix Multiplication & LU-Factorization: Vectorized, Multicore, Distributed & GPU-Accelerated",
+        "date" : "2025",
+        "type" : "Master's Project",
+        "description" : "For my master's project, I developed and optimized HPC kernels for in-memory dense double precision matrix-matrix multiplication (DGEMM) and LU factorization (DGETRF). The optimization was performed at all levels. Single-core: Achieved OpenBLAS performance through manual vectorization (AVX2) and FMA instructions, maximizing register usage in x86 assembly. Multicore: Implemented efficient OpenMP parallelization, outperforming OpenBLAS and achieving significantly lower performance variance. Distributed computing: Designed an MPI-based parallelization, demonstrating strong and weak scalability across multiple nodes. GPU acceleration: Developed a CUDA-optimized version. The GEMM implementation reached performance equivalent to Intel MKL, proving competitive across different matrix sizes and transpositions. Key improvements for future work were also identified such as NUMA-aware optimizations and better MPI+OpenMP block partitioning.",
+        "tags" : ["C", "MPI", "CUDA", "SIMD", "MPI", "OpenMP", "x86 Assembly"],
+        "icons" : 
+        [
+            {"alt" : "Presentation Slides", "link" : "ressources/pdf/presentation_hpc_project.pdf", "path" : "/images/icon_presentation.png"}
+        ],
+        "media" :
+        [
+            {"alt-text" : "Single core GEMM performance graph",  "path" : "/images/Projet HPC-18.jpg"},
+            {"alt-text" : "DGETRF Block technique",  "path" : "/images/Projet HPC-43.jpg"}
+        ]
+    },
+    {
+        "title": "Teratec HPC Hackathon 2025: ARM-AWS Optimization of Code_Aster & Black-Scholes Equations",
+        "date": "2025",
+        "type": "Hackathon Competition",
+        "description": "Participated in a 4-person team at the Teratec HPC Hackathon, competing against other Master's students in HPC from all over Europe. Optimized Viridien's Black-Scholes Monte Carlo simulator and EDF's structural mechanics code (Code_Aster) on AWS Graviton4 ARM clusters. For Viridien's Code Serial, we replaced inefficient C++ random number generation with ARM Performance Libraries (ARMPL), achieving a 478x speedup through SVE2-vectorized batches, OpenMP multithreading across Graviton-4's 96 cores, and buffer size autotuning. Precision was validated against double-precision benchmarks. To reduce exponential computations, the mathematical formula was rewritten to skip non-contributing branches and enable efficient vectorization. For Code_Aster, we resolved compilation challenges by downgrading dependencies, patching MEDCoupling library errors, and benchmarking PETSc/MUMPS solvers. A full compilation script was written to reproduce the results. Benchmarks of weak scalability, communication volumes, and time allocation were conducted.",
+        "tags" : ["ARM", "SVE", "C"],
+        "icons" : 
+        [
+            {"alt" : "PDF Report", "link" : "ressources/pdf/teratec_hackthon.pdf", "path" : "/images/icon_pdf.png"}
+        ],
+        "media" :
+        [
+            {"alt-text" : "Banner Hackathon",  "path" : "/images/Hackthon_banner.jpg"}
+        ]
+    },
+    {
         "title" : "Operating System for RISC-V Processors",
         "date" : "2024",
         "type" : "Personal Project",
