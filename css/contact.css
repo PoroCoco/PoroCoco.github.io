@@ -51,7 +51,7 @@
     background-color: transparent;
 }
 .cube__face--front {
-    background-color: #242424;
+    background-color: #191919;
     transform: translateZ(5vw);
 }
 

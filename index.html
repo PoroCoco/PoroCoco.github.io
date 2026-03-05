@@ -29,9 +29,9 @@
     </header>
 
     <section class="about" id="about">
-        Hey, I'm Louis Peyrondet a <span id="age" class="years"></span> year-old software engineering student currently at Enseirb-Matmeca. I make things from scratch and reinvent the wheel. I'm mainly interested in low level development, GPUs, optimization, system programming, parallel and distributed computing. I'm also open to exploring additional domains and expanding my skill set.<br>
-        You can download my <b><a href="/ressources/pdf/resume_en.pdf" target="_blank">Resume</a></b>. <br>
-        Here are some of my projects and experience !
+        Hey, I'm Louis Peyrondet a <span id="age" class="years">24.000000000</span> year-old software engineering student currently at Enseirb-Matmeca. I make things from scratch and reinvent the wheel. I'm mainly interested in low level development, GPUs, optimization, system programming, parallel and distributed computing. I'm also open to exploring additional domains and expanding my skill set.<br>
+        You can download my <b><a href="/ressources/pdf/resume_en.pdf" target="_blank">Resume</a></b>.<br>
+        Here's some of what I've built.
     </section>
 
     <section id="projects">
@@ -101,7 +101,7 @@
 
     <footer>
         <p>Made from scratch in pure HTML, CSS and JavaScript</p>
-        <p>&copy; 2024 Louis Peyrondet</p>
+        <p>&copy; <span id="footer-year"></span> Louis Peyrondet</p>
     </footer>
 
     
@@ -110,6 +110,8 @@
     <script type="text/javascript" src="/js/carousel.js"></script>
     <script type="module" src="/js/generateProjects.js"></script>
     <script>
+        document.getElementById("footer-year").textContent = new Date().getFullYear();
+
         function updateAge() {
             const ageSpan = document.getElementById("age");
             const birthDateObj = new Date("2002-01-26");
